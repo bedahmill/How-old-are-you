@@ -25,25 +25,64 @@ disable.addEventListener('click', disableAnimation =>{
 findOut.addEventListener('click', find =>{
     // getting users date of birth
    let date = new Date(input.value);   // users date 
-   let month = date.getMonth() +1; // users month
-   let day  = date.getDate(); // users day
-   let year = date.getFullYear(); // users year
+//    let month = date.getMonth() +1; // users month
+//    let day  = date.getDate(); // users day
+//    let year = date.getFullYear(); // users year
 
    // getting current date 
     let cDate = new Date();
-    let cMonth = cDate.getMonth()+1;
-    let cDay = cDate.getDate();
-    let cYear = cDate.getFullYear();
+    // let cMonth = cDate.getMonth()+1;
+    // let cDay = cDate.getDate();
+    // let cYear = cDate.getFullYear();
 
+//  using moment js
+    // get difference in years
+    var a = moment(date);
+    var b = moment(cDate);
+    var years = b.diff(a,'years');
+    console.log('Years is:' + years);
+
+    // get difference in Months
+    var a = moment(date);
+    var b = moment(cDate);
+    var months = b.diff(a,'months');
+    console.log('Months is:' + months)
+
+    // get difference in weeks
+    var a = moment(date);
+    var b = moment(cDate);
+    var weeks = b.diff(a,'weeks');
+    console.log('weeks is:' + weeks)
+
+    // get difference in days
+    var a = moment(date);
+    var b = moment(cDate);
+    var days = b.diff(a,'days');
+    console.log('Days is:' + days)
+});
+
+
+
+//using ordinary js 
+
+    /* getting year difference
+    
     let difYear = cYear - year;
+    if(cMonth === month){  //if months are the same then check days
+        if(cDay<day){
+            difYear = difYear -1;
+        }
+    }else{
+        if(cMonth < month){  // if current month is less than birthday month
+            difYear = difYear -1;
+        }
+    }
     console.log("You are " + difYear + " years old.")
   
     // getting the number of months  and difference in current month and users birthday month
     let numberOfMonths; 
     numberOfMonths = (cYear - year) * 12 + (cMonth - month) - 1;  // both months in finding the difference are excluded
-       console.log('You are '+ numberOfMonths + ' months old')       
-
-
-});
+    console.log('You are '+ numberOfMonths + ' months old'); 
+    */
 
 
