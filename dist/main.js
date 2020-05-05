@@ -23,18 +23,27 @@ disable.addEventListener('click', disableAnimation =>{
 
 // event for find out button
 findOut.addEventListener('click', find =>{
-   let date = new Date(input.value);  // changing the input value to a date function
-   let month = date.getMonth() +1;
-   let day  = date.getDate();
-   let year = date.getFullYear();
+    // getting users date of birth
+   let date = new Date(input.value);   // users date 
+   let month = date.getMonth() +1; // users month
+   let day  = date.getDate(); // users day
+   let year = date.getFullYear(); // users year
+
+   // getting current date 
+    let cDate = new Date();
+    let cMonth = cDate.getMonth()+1;
+    let cDay = cDate.getDate();
+    let cYear = cDate.getFullYear();
+
+    let difYear = cYear - year;
+    console.log("You are " + difYear + " years old.")
+  
+    // getting the number of months  and difference in current month and users birthday month
+    let numberOfMonths; 
+    numberOfMonths = (cYear - year) * 12 + (cMonth - month) - 1;  // both months in finding the difference are excluded
+       console.log('You are '+ numberOfMonths + ' months old')       
 
 
-    console.log("Day is :"+ day);
-    console.log('Month is' + month);
-    console.log('Year is' + year);
-
-    let tdate = new Date();
-    let 
 });
 
 
