@@ -14,7 +14,10 @@ body {
   padding: 3em;
   margin: 3em;
 }
-
+h1,
+h6 {
+  font-family: "Quicksand", sans-serif;
+}
 //button styling
 .findOut {
   border: 2px $action-color solid;
@@ -26,11 +29,24 @@ body {
   cursor: pointer;
 
   // neomorphism
-  box-shadow: 
-  12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
 }
-.findOut:hover{
-    background: $action-color;
+.findOut:hover {
+  background: $action-color;
 }
+// disbale gradient animation and change to one color
 
+.removeGradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
