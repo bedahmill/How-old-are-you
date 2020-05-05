@@ -43,37 +43,38 @@ findOut.addEventListener('click', find => {
     var a = moment(date);
     var b = moment(cDate);
     var years = b.diff(a, 'years');
-    console.log('Years is:' + years);
+    document.getElementById('years').innerHTML = years;
 
     // get difference in Months
     var a = moment(date);
     var b = moment(cDate);
     var months = b.diff(a, 'months');
-    console.log('Months is:' + months)
+    document.getElementById('months').innerHTML = months;
 
     // get difference in weeks
     var a = moment(date);
     var b = moment(cDate);
     var weeks = b.diff(a, 'weeks');
-    console.log('weeks is:' + weeks)
+    document.getElementById('weeks').innerHTML = weeks;
 
     // get difference in days
     var a = moment(date);
     var b = moment(cDate);
     var days = b.diff(a, 'days');
-    console.log('Days is:' + days);
+    document.getElementById('days').innerHTML = days;
+
+    // get difference in hours
+      var a = moment(date);
+      var b = moment(cDate);
+      var hours = b.diff(a, 'hours');
+      document.getElementById('hours').innerHTML = hours;
 
     // get difference in minutes
     var a = moment(date);
     var b = moment(cDate);
     var minutes = b.diff(a, 'minutes');
-    console.log('Minutes is:' + minutes);
-
-    // get difference in seconds
-    var a = moment(date);
-    var b = moment(cDate);
-    var seconds = b.diff(a, 'seconds');
-    console.log('Seconds is:' + seconds)
+    document.getElementById('minutes').innerHTML = minutes;
+  
 });
 
 
