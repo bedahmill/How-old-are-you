@@ -1,71 +1,87 @@
 // Setting the variables and constants
 const disable = document.querySelector('#disableBtn');
-const input = document.getElementById('birthdayInput'); 
+const input = document.getElementById('birthdayInput');
 const findOut = document.getElementById('explore');
 
 // event listener for the disable button
-disable.addEventListener('click', disableAnimation =>{
-    document.getElementById('me').style.background ='#000000'; // background for old browsers
-    document.getElementById('me').style.background ='-webkit-linear-gradient(to right, #000000, #434343)'; //for Chrome 10-25, Safari 5.1-6
-    document.getElementById('me').style.background ='linear-gradient(to right, #000000, #434343)'; // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+disable.addEventListener('click', disableAnimation => {
+    document.getElementById('me').style.background = '#000000'; // background for old browsers
+    document.getElementById('me').style.background = '-webkit-linear-gradient(to right, #000000, #434343)'; //for Chrome 10-25, Safari 5.1-6
+    document.getElementById('me').style.background = 'linear-gradient(to right, #000000, #434343)'; // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
 
     disable.remove();
     document.getElementById('disclaimer').remove();
     // document.getElementById('enjoy').style.visibility = 'visible';
     const x = document.getElementById('enjoy');
-    setTimeout(function(){
-         x.style.visibility = 'visible';  // time function to display the enjoy text
-         }, 1000);    
-    setTimeout(function(){
-         x.style.visibility = 'hidden';  // time function to remove the enjoy text
-         }, 3000);    
+    setTimeout(function () {
+        x.style.visibility = 'visible'; // time function to display the enjoy text
+    }, 1000);
+    setTimeout(function () {
+        x.style.visibility = 'hidden'; // time function to remove the enjoy text
+    }, 3000);
 });
 
 // event for find out button
-findOut.addEventListener('click', find =>{
+findOut.addEventListener('click', find => {
+    // validation for input value
+    if (input.value === '') {
+        let error = document.querySelector('.error');
+        error.style.display = 'block'; // time function to show error message
+
+        setTimeout(function () {
+            error.style.display = ''; // time function to remove error message
+        }, 2500);
+    }
     // getting users date of birth
-   let date = new Date(input.value);   // users date 
-//    let month = date.getMonth() +1; // users month
-//    let day  = date.getDate(); // users day
-//    let year = date.getFullYear(); // users year
+    let date = new Date(input.value); // users date 
 
-   // getting current date 
+    // getting current date 
     let cDate = new Date();
-    // let cMonth = cDate.getMonth()+1;
-    // let cDay = cDate.getDate();
-    // let cYear = cDate.getFullYear();
 
-//  using moment js
+    //  using moment js
     // get difference in years
     var a = moment(date);
     var b = moment(cDate);
-    var years = b.diff(a,'years');
+    var years = b.diff(a, 'years');
     console.log('Years is:' + years);
 
     // get difference in Months
     var a = moment(date);
     var b = moment(cDate);
-    var months = b.diff(a,'months');
+    var months = b.diff(a, 'months');
     console.log('Months is:' + months)
 
     // get difference in weeks
     var a = moment(date);
     var b = moment(cDate);
-    var weeks = b.diff(a,'weeks');
+    var weeks = b.diff(a, 'weeks');
     console.log('weeks is:' + weeks)
 
     // get difference in days
     var a = moment(date);
     var b = moment(cDate);
-    var days = b.diff(a,'days');
-    console.log('Days is:' + days)
+    var days = b.diff(a, 'days');
+    console.log('Days is:' + days);
+
+    // get difference in minutes
+    var a = moment(date);
+    var b = moment(cDate);
+    var minutes = b.diff(a, 'minutes');
+    console.log('Minutes is:' + minutes);
+
+    // get difference in seconds
+    var a = moment(date);
+    var b = moment(cDate);
+    var seconds = b.diff(a, 'seconds');
+    console.log('Seconds is:' + seconds)
 });
+
 
 
 
 //using ordinary js 
 
-    /* getting year difference
+/* getting year difference
     
     let difYear = cYear - year;
     if(cMonth === month){  //if months are the same then check days
@@ -84,5 +100,3 @@ findOut.addEventListener('click', find =>{
     numberOfMonths = (cYear - year) * 12 + (cMonth - month) - 1;  // both months in finding the difference are excluded
     console.log('You are '+ numberOfMonths + ' months old'); 
     */
-
-

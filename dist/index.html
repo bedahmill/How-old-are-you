@@ -7,24 +7,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <title>Birthday</title>
-    <!-- <style>
-        
-    </style> -->
 
+   
+    <title>Birthday</title>
 </head>
 <body class="bodyAnimation" id="me">
 
     <div class="row container">
         <div class="col s12 m12 maintext fade-in">
-            <h1 class="center-align"> Hey,Wanna find when your next birthday is?</h1> 
-            <h6 class="center-align">Here you are showed months,weeks and even days, come on have some fun</h6>
+            <h1 class="center-align"> Hey,Wanna know how much old are you really?</h1> 
+            <h6 class="center-align">See how old you are from years(obvious), months, even days!</h6>
         </div>
         <div class="inputField fade-in-down">
             <h5 class="inputInfo center-align">Enter your birthday here </h5>
             <input type="date"  id="birthdayInput" class="center-align cyan ">
         </div>
         <div class="center-align fade-in-right">
+            <p class="center-align error">Please enter some values</p>
             <button class="findOut" id="explore">Find Out</button>
         </div>
         <div class="infoText">
@@ -35,7 +34,30 @@
                     <h6 id="enjoy" class="center-align">Hope this seems better.</h6>
             </div>
         </div>
-    </div>
+        <div class="card">
+            <div class="card-content">
+              <p>Here are your results</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test1">Test 1</a></li>
+                <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+                <li class="tab"><a href="#test3">Test 3</a></li>
+                <li class="tab"><a href="#test4">Test 4</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="test1">Test 1</div>
+              <div id="test2">Test 2</div>
+              <div id="test3">Test 3</div>
+              <div id="test4">Test 4</div>
+            </div>
+          </div>
+
+
+
+    <script type = "text/javascript"  src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>             
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script src="main.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
 </body>
