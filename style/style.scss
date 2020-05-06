@@ -21,20 +21,13 @@ h6 {
   color: white;
 }
 
-//button styling
-.findOut {
-  border: 2px $action-color solid;
-  background-color: white;
-  color: black;
-  padding: 14px 28px;
-  margin: 1.5em;
-  font-size: 16px;
-  cursor: pointer;
-}
-.findOut:hover {
-  background: $action-color;
+p,li{
+  font-family: "Quicksand", sans-serif;
 }
 
+.findOut{
+  margin: 1.5rem 1rem;
+}
 // the enjoy text after recommendation
 #enjoy{
   visibility: hidden;
