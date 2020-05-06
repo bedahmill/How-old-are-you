@@ -10,9 +10,9 @@ body {
 
 // maintext sets
 .maintext {
-  border: 2px $secondary-color solid;
-  padding: 3em;
-  margin: 3em;
+  border: 1.5px $secondary-color solid;
+  padding-bottom: 5em;
+  margin: 2.5em;
 }
 // heeader styling
 h1,h5,
@@ -20,8 +20,14 @@ h6 {
   font-family: "Quicksand", sans-serif;
   color: white;
 }
+h1{
+  font-size: 3.5em;
+}
+.more{
+  padding: 1em;
+}
 
-p,li{
+p,li,a{
   font-family: "Quicksand", sans-serif;
 }
 

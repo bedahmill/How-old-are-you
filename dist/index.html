@@ -14,39 +14,39 @@
 <body class="bodyAnimation" id="me">
 
     <div class="row container">
-        <div class="col s12 m12 maintext fade-in">
+        <div class="col s12 m12 l12 maintext fade-in">
             <h1 class="center-align"> Hey,Wanna know how much old are you?</h1>
-            <h1 class="center-align">Curious dive-in ...</h1> 
-            <h6 class="center-align">See how old you are from years(obvious), months, even days and minutes!</h6>
+            <h4 class="center-align white-text">Curious dive-in</h4> 
+            <h6 class="center-align more">See how old you are from years(obvious), months, even days and minutes!</h6>
         </div>
         <div class="inputField fade-in-down">
             <h5 class="inputInfo center-align">Enter your birthday here </h5>
             <input type="date"  id="birthdayInput" class="center-align white-text ">
         </div>
         <div class="center-align fade-in-right">
-            <p class="center-align error red-text">Please enter some values</p>
-            <button class="findOut green btn-large" id="explore"><i class="material-icons left">search</i>Find Out</button>
+            <p class="center-align error white-text">Please enter some values</p>
+            <a class="findOut green btn-large" id="explore"><i class="material-icons left">search</i>Find Out</a>
         </div>
-        <div class="infoText fade-in-down">
+        <div class="infoText fade-in-right-after">
             <div class="container center-align">
                 <h6 id="disclaimer">If the background is disturbing, you can disable it here.
                     Sorry for the Disturbance</h6> 
-                    <a id="disableBtn" class="waves-effect waves-light btn red">Disable</a>
-                    <h6 id="enjoy" class="center-align">Hope this seems better.</h6>
+                    <a id="disableBtn" class="waves-effect waves-light btn red"><i class="material-icons left">clear</i>Disable</a>
+                    <h6 id="enjoy" class="center-align">Hope the view seems better.</h6>
             </div>
         </div>
-        <div class="card fade-in">
+        <div class="card fade-in-down-after">
             <div class="card-content">
               <h5 class="center align orange-text">Here are your results</h5>
             </div>
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#years">Years</a></li>
-                <li class="tab"><a class="active" href="#months">Months</a></li>
-                <li class="tab"><a href="#weeks">Weeks</a></li>
-                <li class="tab"><a href="#days">Days</a></li>
-                <li class="tab"><a href="#hours">Hours</a></li>
-                <li class="tab"><a href="#minutes">Minutes</a></li>
+                <li class="tab"><a href="#years" class="green-text">Years</a></li>
+                <li class="tab"><a class="active green-text" href="#months">Months</a></li>
+                <li class="tab"><a href="#weeks" class="green-text">Weeks</a></li>
+                <li class="tab"><a href="#days" class="green-text">Days</a></li>
+                <li class="tab"><a href="#hours" class="green-text">Hours</a></li>
+                <li class="tab"><a href="#minutes" class="green-text">Minutes</a></li>
               </ul>
             </div>
             <div class="card-content grey lighten-4">
@@ -58,10 +58,10 @@
               <div id="minutes"></div>
             </div>
           </div>
-
-
-
-    <script type = "text/javascript"  src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>             
+          <div class="container fade-in-after">
+            <h6>The resources used are from Materiliaze CSS, MomentJs, JQuery and Google fonts</h6>
+          </div>
+    <script type = "text/javascript"  src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"> </script>             
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script src="main.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>

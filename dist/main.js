@@ -38,44 +38,29 @@ findOut.addEventListener('click', find => {
     // getting current date 
     let cDate = new Date();
 
-    //  using moment js
-    // get difference in years
-    var a = moment(date);
-    var b = moment(cDate);
-    var years = b.diff(a, 'years');
+    /*  using moment js */
+    
+
+    var a = moment(date); //users date
+    var b = moment(cDate); // current date
+    var years = b.diff(a, 'years'); // difference in years
+    var months = b.diff(a, 'months'); // difference in months
+    var weeks = b.diff(a, 'weeks'); // difference in weeks
+    var days = b.diff(a, 'days'); // difference in days
+    var hours = b.diff(a, 'hours'); // difference in hours
+    var minutes = b.diff(a, 'minutes'); // difference in minutes
+
+    // setting the values to the DOM
     document.getElementById('years').innerHTML = years;
-
-    // get difference in Months
-    var a = moment(date);
-    var b = moment(cDate);
-    var months = b.diff(a, 'months');
     document.getElementById('months').innerHTML = months;
-
-    // get difference in weeks
-    var a = moment(date);
-    var b = moment(cDate);
-    var weeks = b.diff(a, 'weeks');
     document.getElementById('weeks').innerHTML = weeks;
-
-    // get difference in days
-    var a = moment(date);
-    var b = moment(cDate);
-    var days = b.diff(a, 'days');
     document.getElementById('days').innerHTML = days;
-
-    // get difference in hours
-      var a = moment(date);
-      var b = moment(cDate);
-      var hours = b.diff(a, 'hours');
-      document.getElementById('hours').innerHTML = hours;
-
-    // get difference in minutes
-    var a = moment(date);
-    var b = moment(cDate);
-    var minutes = b.diff(a, 'minutes');
+    document.getElementById('hours').innerHTML = hours;
     document.getElementById('minutes').innerHTML = minutes;
+
   
 });
+
 
 
 
